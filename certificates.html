@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certificates – Makhzum Bin Harun</title>
+  <meta name="description" content="Extracurricular and professional certificates earned by Makhzum Bin Harun."/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f4c81'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='18' font-weight='700' fill='white' letter-spacing='-0.5'%3EMBH%3C/text%3E%3C/svg%3E"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* ── Certificates page extras ── */
+    .cert-page { padding-top: var(--nav-h); min-height: 100vh; }
+    .cert-hero  { background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%); padding: 64px 24px; text-align: center; }
+    .cert-hero h1 { font-family: var(--font-display); font-size: clamp(2rem,5vw,3.2rem); font-weight: 900; color: #fff; margin-bottom: 10px; }
+    .cert-hero p  { color: rgba(255,255,255,.8); font-size: 15px; }
+    .cert-hero .back-link { display:inline-flex; align-items:center; gap:6px; color:rgba(255,255,255,.75); font-size:13.5px; margin-bottom:20px; transition:color .2s; }
+    .cert-hero .back-link:hover { color:#fff; }
+
+    /* Filter tabs */
+    .cert-filters { display:flex; justify-content:center; gap:8px; flex-wrap:wrap; padding: 36px 24px 0; }
+    .cert-filter-btn { padding:7px 18px; border-radius:50px; border:1.5px solid var(--border); background:var(--surface); font-size:13px; font-weight:600; color:var(--text-2); cursor:pointer; transition:all .25s; }
+    .cert-filter-btn:hover, .cert-filter-btn.active { background:var(--accent); border-color:var(--accent); color:#fff; }
+
+    /* Grid */
+    .cert-grid { max-width:1120px; margin:0 auto; padding:32px 24px 80px; display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:22px; }
+    .cert-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; transition:all .3s; display:flex; flex-direction:column; }
+    .cert-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); border-color:var(--accent); }
+
+    /* Certificate preview area */
+    .cert-preview { position:relative; height:180px; background:var(--bg-3); display:flex; align-items:center; justify-content:center; overflow:hidden; cursor:pointer; }
+    .cert-preview img { width:100%; height:100%; object-fit:cover; transition:transform .4s; }
+    .cert-card:hover .cert-preview img { transform:scale(1.04); }
+    .cert-preview-placeholder { display:flex; flex-direction:column; align-items:center; gap:10px; color:var(--text-3); }
+    .cert-preview-placeholder i { font-size:40px; }
+    .cert-preview-placeholder span { font-size:12px; font-family:var(--font-mono); }
+    .cert-preview-overlay { position:absolute; inset:0; background:rgba(15,76,129,.7); opacity:0; display:flex; align-items:center; justify-content:center; transition:opacity .25s; }
+    .cert-card:hover .cert-preview-overlay { opacity:1; }
+    .cert-preview-overlay span { color:#fff; font-size:14px; font-weight:600; display:flex; align-items:center; gap:8px; }
+
+    /* Card body */
+    .cert-body { padding:18px 20px; flex:1; display:flex; flex-direction:column; gap:8px; }
+    .cert-category-tag { display:inline-block; font-size:10.5px; font-family:var(--font-mono); font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--accent); background:var(--accent-light); padding:2px 8px; border-radius:4px; margin-bottom:2px; }
+    .cert-title { font-family:var(--font-display); font-size:1rem; font-weight:700; color:var(--text); line-height:1.3; }
+    .cert-issuer { font-size:13px; color:var(--accent); font-weight:600; }
+    .cert-date { font-size:12px; color:var(--text-3); font-family:var(--font-mono); display:flex; align-items:center; gap:5px; }
+    .cert-actions { display:flex; gap:10px; margin-top:auto; padding-top:12px; border-top:1px solid var(--border); }
+    .cert-btn { flex:1; padding:8px; border-radius:7px; font-size:12.5px; font-weight:600; text-align:center; display:flex; align-items:center; justify-content:center; gap:6px; transition:all .25s; border:1.5px solid transparent; }
+    .cert-btn-primary { background:var(--accent); color:#fff; }
+    .cert-btn-primary:hover { background:var(--accent-2); color:#fff; }
+    .cert-btn-outline { background:transparent; color:var(--accent); border-color:var(--accent); }
+    .cert-btn-outline:hover { background:var(--accent); color:#fff; }
+
+    /* Modal */
+    .cert-modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,.75); z-index:2000; align-items:center; justify-content:center; padding:20px; }
+    .cert-modal.open { display:flex; }
+    .cert-modal-inner { background:var(--surface); border-radius:var(--radius-lg); max-width:860px; width:100%; max-height:90vh; overflow:hidden; display:flex; flex-direction:column; }
+    .cert-modal-header { display:flex; align-items:center; justify-content:space-between; padding:16px 24px; border-bottom:1px solid var(--border); }
+    .cert-modal-title { font-family:var(--font-display); font-size:1.1rem; font-weight:700; color:var(--text); }
+    .cert-modal-close { background:none; border:none; font-size:20px; color:var(--text-3); cursor:pointer; padding:4px; border-radius:6px; transition:all .2s; }
+    .cert-modal-close:hover { background:var(--bg-3); color:var(--accent); }
+    .cert-modal-img { width:100%; height:auto; max-height:70vh; object-fit:contain; display:block; }
+    .cert-modal-placeholder { height:300px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:14px; color:var(--text-3); font-size:48px; }
+    .cert-modal-placeholder p { font-size:14px; }
+
+    /* Empty state */
+    .cert-empty { text-align:center; padding:60px 24px; color:var(--text-3); display:none; }
+    .cert-empty i { font-size:40px; margin-bottom:12px; }
+
+    @media(max-width:600px){
+      .cert-grid { grid-template-columns:1fr; padding:24px 16px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar (minimal, reuses main styles) -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg width="36" height="36" viewBox="0 0 64 64"><rect width="64" height="64" rx="10" fill="var(--accent)"/><text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#fff" letter-spacing="-0.5">MBH</text></svg>
+      <span class="nav-name">Makhzum<span class="dot">.</span></span>
+    </a>
+    <div style="display:flex;align-items:center;gap:8px">
+      <a href="index.html" class="btn btn-ghost" style="font-size:13px;padding:8px 16px;"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+      <button id="theme-toggle" class="theme-btn"><i class="fa-solid fa-moon" id="theme-icon"></i></button>
+    </div>
+  </div>
+</nav>
+
+<div class="cert-page">
+
+  <!-- Hero -->
+  <div class="cert-hero">
+    <h1><i class="fa-solid fa-certificate"></i> My Certificates</h1>
+    <p>Extracurricular, academic, and professional certifications</p>
+  </div>
+
+  <!-- Filter tabs -->
+  <div class="cert-filters">
+    <button class="cert-filter-btn active" data-filter="all">All</button>
+    <button class="cert-filter-btn" data-filter="programming">Programming</button>
+    <button class="cert-filter-btn" data-filter="ecommerce">E-Commerce</button>
+    <button class="cert-filter-btn" data-filter="social">Social / Media</button>
+    <button class="cert-filter-btn" data-filter="leadership">Leadership</button>
+    <button class="cert-filter-btn" data-filter="other">Other</button>
+  </div>
+
+  <!-- Certificate Grid -->
+  <div class="cert-grid" id="cert-grid">
+
+    <!-- ════════════════════════════════════════════
+         HOW TO ADD A CERTIFICATE:
+         1. Copy one <div class="cert-card"> block below
+         2. Fill in: cert-title, cert-issuer, cert-date
+         3. Set data-category (programming/ecommerce/social/leadership/other)
+         4. For image: replace cert-preview-placeholder with:
+              <img src="certs/your-cert.jpg" alt="Certificate title">
+         5. Set data-img-src on .cert-preview to the image URL
+            for the modal popup to work
+         ════════════════════════════════════════════ -->
+
+    <!-- Shopify E-Commerce -->
+    <div class="cert-card" data-category="ecommerce">
+      <div class="cert-preview" data-img-src="" data-title="Shopify E-Commerce Certification">
+        <!-- Replace with: <img src="certs/shopify-coursera.jpg" alt="Shopify Certificate"> -->
+        <div class="cert-preview-placeholder">
+          <i class="fa-brands fa-shopify" style="color:#96bf48;"></i>
+          <span>Click to preview</span>
+        </div>
+        <div class="cert-preview-overlay">
+          <span><i class="fa-solid fa-expand"></i> View Certificate</span>
+        </div>
+      </div>
+      <div class="cert-body">
+        <span class="cert-category-tag">E-Commerce</span>
+        <h3 class="cert-title">Create Your E-Commerce Store with Shopify</h3>
+        <p class="cert-issuer"><i class="fa-solid fa-building"></i> Coursera</p>
+        <p class="cert-date"><i class="fa-regular fa-calendar"></i> September 2024</p>
+        <div class="cert-actions">
+          <!-- Replace href with your actual certificate verification URL -->
+          <a href="https://www.coursera.org" target="_blank" class="cert-btn cert-btn-primary">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Verify
+          </a>
+          <!-- Replace href with your certificate image/PDF path -->
+          <a href="#" class="cert-btn cert-btn-outline" download>
+            <i class="fa-solid fa-download"></i> Download
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Extracurricular placeholder 1 -->
+    <div class="cert-card" data-category="leadership">
+      <div class="cert-preview" data-img-src="" data-title="Scout / Leadership Certificate">
+        <div class="cert-preview-placeholder">
+          <i class="fa-solid fa-award" style="color:var(--accent);"></i>
+          <span>Click to preview</span>
+        </div>
+        <div class="cert-preview-overlay">
+          <span><i class="fa-solid fa-expand"></i> View Certificate</span>
+        </div>
+      </div>
+      <div class="cert-body">
+        <span class="cert-category-tag">Leadership</span>
+        <!-- ✏️ Replace with your actual certificate details -->
+        <h3 class="cert-title">Scout / Leadership Certificate</h3>
+        <p class="cert-issuer"><i class="fa-solid fa-building"></i> Issuer Name</p>
+        <p class="cert-date"><i class="fa-regular fa-calendar"></i> Month Year</p>
+        <div class="cert-actions">
+          <a href="#" target="_blank" class="cert-btn cert-btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Verify</a>
+          <a href="#" class="cert-btn cert-btn-outline" download><i class="fa-solid fa-download"></i> Download</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Placeholder 2 -->
+    <div class="cert-card" data-category="other">
+      <div class="cert-preview" data-img-src="" data-title="Certificate">
+        <div class="cert-preview-placeholder">
+          <i class="fa-solid fa-certificate" style="color:var(--accent);"></i>
+          <span>Click to preview</span>
+        </div>
+        <div class="cert-preview-overlay">
+          <span><i class="fa-solid fa-expand"></i> View Certificate</span>
+        </div>
+      </div>
+      <div class="cert-body">
+        <span class="cert-category-tag">Other</span>
+        <!-- ✏️ Replace with your actual certificate details -->
+        <h3 class="cert-title">Certificate Title Here</h3>
+        <p class="cert-issuer"><i class="fa-solid fa-building"></i> Issuer Name</p>
+        <p class="cert-date"><i class="fa-regular fa-calendar"></i> Month Year</p>
+        <div class="cert-actions">
+          <a href="#" target="_blank" class="cert-btn cert-btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Verify</a>
+          <a href="#" class="cert-btn cert-btn-outline" download><i class="fa-solid fa-download"></i> Download</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more certificates following the same pattern above -->
+
+  </div><!-- /cert-grid -->
+
+  <div class="cert-empty" id="cert-empty">
+    <i class="fa-solid fa-filter-circle-xmark"></i>
+    <p>No certificates in this category yet.</p>
+  </div>
+
+  <!-- External link -->
+  <div style="text-align:center;padding-bottom:56px;">
+    <a href="https://sites.google.com/view/makhzumbinharun/extra-curricular"
+       target="_blank" class="btn btn-outline">
+      <i class="fa-solid fa-external-link-alt"></i> View All Certificates on Google Sites
+    </a>
+  </div>
+
+</div><!-- /cert-page -->
+
+<!-- Modal -->
+<div class="cert-modal" id="cert-modal" role="dialog" aria-modal="true">
+  <div class="cert-modal-inner">
+    <div class="cert-modal-header">
+      <span class="cert-modal-title" id="modal-title">Certificate</span>
+      <button class="cert-modal-close" id="modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div id="modal-body">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+</div>
+
+<button id="back-to-top" class="back-to-top"><i class="fa-solid fa-chevron-up"></i></button>
+
+<script>
+/* ── Theme ── */
+const html = document.documentElement;
+const themeBtn  = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+function setTheme(dark){
+  html.setAttribute('data-theme', dark ? 'dark' : 'light');
+  themeIcon.className = dark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+  localStorage.setItem('mbh-theme', dark ? 'dark' : 'light');
+}
+const saved = localStorage.getItem('mbh-theme');
+setTheme(saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches);
+themeBtn.addEventListener('click', () => setTheme(html.getAttribute('data-theme') !== 'dark'));
+
+/* ── Navbar scroll ── */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 20);
+  document.getElementById('back-to-top').classList.toggle('visible', window.scrollY > 300);
+}, { passive: true });
+document.getElementById('back-to-top').addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+
+/* ── Filter ── */
+const filterBtns = document.querySelectorAll('.cert-filter-btn');
+const cards      = document.querySelectorAll('.cert-card');
+const emptyEl    = document.getElementById('cert-empty');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    let visible = 0;
+    cards.forEach(c => {
+      const show = f === 'all' || c.dataset.category === f;
+      c.style.display = show ? 'flex' : 'none';
+      if (show) visible++;
+    });
+    emptyEl.style.display = visible === 0 ? 'block' : 'none';
+  });
+});
+
+/* ── Modal ── */
+const modal      = document.getElementById('cert-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalBody  = document.getElementById('modal-body');
+const modalClose = document.getElementById('modal-close');
+
+document.querySelectorAll('.cert-preview').forEach(p => {
+  p.addEventListener('click', () => {
+    const imgSrc = p.dataset.imgSrc;
+    const title  = p.dataset.title || 'Certificate';
+    modalTitle.textContent = title;
+    if (imgSrc) {
+      modalBody.innerHTML = `<img src="${imgSrc}" alt="${title}" class="cert-modal-img">`;
+    } else {
+      modalBody.innerHTML = `<div class="cert-modal-placeholder"><i class="fa-solid fa-certificate"></i><p>Add image path to data-img-src attribute to preview</p></div>`;
+    }
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+function closeModal(){
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+  modalBody.innerHTML = '';
+}
+modalClose.addEventListener('click', closeModal);
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>

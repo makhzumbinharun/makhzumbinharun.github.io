@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Makhzum Bin Harun – CSE Student & Competitive Programmer</title>
+  <meta name="description" content="Portfolio of Makhzum Bin Harun – CSE Student at BUBT, C/C++ programmer, competitive programmer." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f4c81'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='18' font-weight='700' fill='white' letter-spacing='-0.5'%3EMBH%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <svg width="36" height="36" viewBox="0 0 64 64"><rect width="64" height="64" rx="10" fill="var(--accent)"/><text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#fff" letter-spacing="-0.5">MBH</text></svg>
+      <span class="nav-name">Makhzum<span class="dot">.</span></span>
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about"       class="nav-link">About</a></li>
+      <li><a href="#skills"      class="nav-link">Skills</a></li>
+      <li><a href="#projects"    class="nav-link">Projects</a></li>
+      <li><a href="#competitive" class="nav-link">CP</a></li>
+      <li><a href="#experience"  class="nav-link">Experience</a></li>
+      <li><a href="#contact"     class="nav-link">Contact</a></li>
+      <li><a href="certificates.html" class="nav-cert-btn" target="_blank"><i class="fa-solid fa-certificate"></i> Certificates</a></li>
+      <li><button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode"><i class="fa-solid fa-moon" id="theme-icon"></i></button></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero-section">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="hero-greeting reveal-up">Hello, I'm</p>
+      <h1 class="hero-name reveal-up delay-1">Makhzum<br/><span class="hero-name-accent">Bin Harun</span></h1>
+      <div class="hero-typing-wrap reveal-up delay-2">
+        <span class="hero-typing-prefix">I am a </span>
+        <span id="typing-text" class="hero-typing"></span><span class="cursor">|</span>
+      </div>
+      <p class="hero-tagline reveal-up delay-3">CSE @ BUBT &nbsp;·&nbsp; C/C++ Programmer &nbsp;·&nbsp; Competitive Programmer &nbsp;·&nbsp; Problem Solver</p>
+      <div class="hero-cta reveal-up delay-4">
+        <a href="#projects"    class="btn btn-primary"><i class="fa-solid fa-code"></i> View Projects</a>
+        <a href="#competitive" class="btn btn-outline"><i class="fa-solid fa-chess-knight"></i> CP Profiles</a>
+        <a href="Resume_of_MAKHZUM_BIN_HARUN.pdf" download class="btn btn-ghost"><i class="fa-solid fa-download"></i> Resume</a>
+      </div>
+      <div class="hero-socials reveal-up delay-5">
+        <a href="https://github.com/makhzumbinharun" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/makhzumbinharun" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://codeforces.com/profile/makhzumbinharun" target="_blank" aria-label="Codeforces" title="Codeforces"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="0" y="9" width="6" height="15" rx="1.5"/><rect x="9" y="3" width="6" height="21" rx="1.5"/><rect x="18" y="13" width="6" height="11" rx="1.5"/></svg></a>
+        <a href="mailto:makhzum204@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="hero-avatar reveal-right delay-2">
+      <div class="avatar-ring">
+        <div class="avatar-img">
+          <!-- 📸 REPLACE: swap SVG with <img src="your-photo.jpg" alt="Makhzum"> -->
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="200" fill="var(--accent-light)"/>
+            <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="Georgia,serif" font-size="60" font-weight="700" fill="var(--accent)" letter-spacing="-2">MBH</text>
+          </svg>
+        </div>
+      </div>
+      <div class="avatar-badge badge-1"><i class="fa-solid fa-code"></i> C / C++</div>
+      <div class="avatar-badge badge-2"><i class="fa-solid fa-chess-knight"></i> CP</div>
+      <div class="avatar-badge badge-3"><i class="fa-solid fa-graduation-cap"></i> BUBT CSE</div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section about-section">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <span class="section-label">Get to know me</span>
+      <h2 class="section-title">About Me</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal-left">
+        <p class="about-summary">I'm <strong>Makhzum Bin Harun</strong>, a passionate Computer Science &amp; Engineering student at <strong>BUBT</strong>, based in Kafrul, Dhaka. I love solving algorithmic problems and turning ideas into working code — through competitive programming, C/C++ projects, and web development.</p>
+        <p class="about-objective">My primary goal is to grow as a software engineer and competitive programmer — mastering Data Structures &amp; Algorithms, contributing to open-source, and building impactful tech products. I believe in learning in public and solving one problem at a time.</p>
+        <div class="about-info-grid">
+          <div class="about-info-item"><span class="info-label">Location</span><span class="info-val">Kafrul, Dhaka, Bangladesh</span></div>
+          <div class="about-info-item"><span class="info-label">Email</span><span class="info-val"><a href="mailto:makhzum204@gmail.com">makhzum204@gmail.com</a></span></div>
+          <div class="about-info-item"><span class="info-label">Website</span><span class="info-val"><a href="https://makhzumbinharun.com" target="_blank">makhzumbinharun.com</a></span></div>
+          <div class="about-info-item"><span class="info-label">Status</span><span class="info-val info-available"><i class="fa-solid fa-circle"></i> Open to opportunities</span></div>
+        </div>
+      </div>
+      <div class="about-edu reveal-right">
+        <h3 class="about-subtitle"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+        <div class="edu-timeline">
+
+          <!-- BUBT -->
+          <div class="edu-tl-item">
+            <div class="edu-tl-dot"></div>
+            <div class="edu-tl-card">
+              <div class="edu-tl-logo">
+                <!-- Replace logo: <img src="logos/bubt.png" alt="BUBT"> -->
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/BUBT_logo.svg/200px-BUBT_logo.svg.png" alt="BUBT" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+                <span class="edu-logo-fb" style="display:none">BUBT</span>
+              </div>
+              <div class="edu-tl-info">
+                <span class="edu-tl-date">2024 – Present &nbsp;(Expected June 2029)</span>
+                <h4>B.Sc. in Computer Science &amp; Engineering</h4>
+                <p class="edu-tl-inst">Bangladesh University of Business &amp; Technology (BUBT)</p>
+                <p class="edu-tl-loc"><i class="fa-solid fa-location-dot"></i> Mirpur-2, Dhaka</p>
+                <p class="edu-tl-courses">Courses: SPL · DSA · OOP in C++ · DBMS · OS · Algorithms</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dhaka Commerce College -->
+          <div class="edu-tl-item">
+            <div class="edu-tl-dot"></div>
+            <div class="edu-tl-card">
+              <div class="edu-tl-logo edu-tl-logo-fb">
+                <!-- Replace logo: <img src="logos/dcc.png" alt="Dhaka Commerce College"> -->
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <div class="edu-tl-info">
+                <span class="edu-tl-date">2021 – 2023</span>
+                <h4>Higher Secondary Certificate (HSC)</h4>
+                <p class="edu-tl-inst">Dhaka Commerce College (DCC)</p>
+                <p class="edu-tl-loc"><i class="fa-solid fa-location-dot"></i> Mirpur, Dhaka</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Monipur High School -->
+          <div class="edu-tl-item">
+            <div class="edu-tl-dot"></div>
+            <div class="edu-tl-card">
+              <div class="edu-tl-logo edu-tl-logo-fb">
+                <!-- Replace logo: <img src="logos/mhsc.png" alt="Monipur High School"> -->
+                <i class="fa-solid fa-school"></i>
+              </div>
+              <div class="edu-tl-info">
+                <span class="edu-tl-date">Until 2021</span>
+                <h4>Secondary School Certificate (SSC)</h4>
+                <p class="edu-tl-inst">Monipur High School and College</p>
+                <p class="edu-tl-loc"><i class="fa-solid fa-location-dot"></i> Mirpur, Dhaka</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="cert-chip"><i class="fa-brands fa-shopify"></i> Shopify E-Commerce · Coursera · Sept 2024</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section skills-section">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <span class="section-label">Technical &amp; Soft Skills</span>
+      <h2 class="section-title">Skills &amp; Tools</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-category skill-featured reveal-up delay-1">
+        <div class="skill-cat-header"><i class="fa-solid fa-terminal"></i><h3>Programming Languages</h3></div>
+        <div class="skill-bars">
+          <div class="skill-bar-item"><div class="skill-bar-label"><span>C</span><span class="skill-pct">80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-label"><span>C++</span><span class="skill-pct">65%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-label"><span>HTML / CSS</span><span class="skill-pct">70%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-category skill-featured reveal-up delay-2">
+        <div class="skill-cat-header"><i class="fa-solid fa-sitemap"></i><h3>CS Fundamentals</h3></div>
+        <div class="skill-badges">
+          <span class="badge badge-cse"><i class="fa-solid fa-diagram-project"></i> Data Structures</span>
+          <span class="badge badge-cse"><i class="fa-solid fa-gears"></i> Algorithms</span>
+          <span class="badge badge-cse"><i class="fa-solid fa-layer-group"></i> OOP in C++</span>
+          <span class="badge badge-cse"><i class="fa-solid fa-database"></i> DBMS</span>
+          <span class="badge badge-cse"><i class="fa-solid fa-server"></i> Operating Systems</span>
+          <span class="badge badge-cse"><i class="fa-solid fa-network-wired"></i> Structured Programming</span>
+        </div>
+      </div>
+      <div class="skill-category skill-featured reveal-up delay-3">
+        <div class="skill-cat-header"><i class="fa-solid fa-chess-knight"></i><h3>Competitive Programming</h3></div>
+        <div class="skill-badges">
+          <span class="badge badge-cse"><i class="fa-solid fa-sort"></i> Sorting &amp; Searching</span>
+          <span class="badge badge-cse"><i class="fa-solid fa-code-branch"></i> Graph Theory</span>
+          <span class="badge badge-cse"><i class="fa-solid fa-infinity"></i> Dynamic Programming</span>
+          <span class="badge badge-cse"><i class="fa-solid fa-square-root-variable"></i> Math &amp; Number Theory</span>
+        </div>
+      </div>
+      <div class="skill-category reveal-up delay-4">
+        <div class="skill-cat-header"><i class="fa-solid fa-wrench"></i><h3>Developer Tools</h3></div>
+        <div class="skill-badges">
+          <span class="badge"><i class="fa-brands fa-github"></i> GitHub</span>
+          <span class="badge"><i class="fa-solid fa-code"></i> VS Code</span>
+          <span class="badge"><i class="fa-solid fa-cube"></i> Code::Blocks</span>
+          <span class="badge"><i class="fa-brands fa-figma"></i> Figma</span>
+        </div>
+      </div>
+      <div class="skill-category reveal-up delay-5">
+        <div class="skill-cat-header"><i class="fa-solid fa-palette"></i><h3>Creative &amp; Media</h3></div>
+        <div class="skill-badges">
+          <span class="badge"><i class="fa-brands fa-adobe"></i> Photoshop</span>
+          <span class="badge"><i class="fa-solid fa-film"></i> Premiere Pro</span>
+          <span class="badge"><i class="fa-solid fa-circle-dot"></i> OBS Studio</span>
+          <span class="badge"><i class="fa-brands fa-canva"></i> Canva</span>
+        </div>
+      </div>
+      <div class="skill-category reveal-up delay-1">
+        <div class="skill-cat-header"><i class="fa-solid fa-people-group"></i><h3>Soft Skills</h3></div>
+        <div class="skill-badges">
+          <span class="badge"><i class="fa-solid fa-star"></i> Leadership</span>
+          <span class="badge"><i class="fa-solid fa-calendar-check"></i> Event Mgmt</span>
+          <span class="badge"><i class="fa-solid fa-handshake"></i> Teamwork</span>
+          <span class="badge"><i class="fa-solid fa-pen-nib"></i> Copywriting</span>
+          <span class="badge"><i class="fa-solid fa-bullhorn"></i> Social Media</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section projects-section">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <span class="section-label">What I've built</span>
+      <h2 class="section-title">Projects</h2>
+    </div>
+    <div class="project-filters reveal-up delay-1">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="cse">CSE / Technical</button>
+      <button class="filter-btn" data-filter="social">Social Impact</button>
+      <button class="filter-btn" data-filter="business">Business</button>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal-up delay-1" data-category="cse">
+        <div class="project-card-top">
+          <div class="project-icon project-icon-cse"><i class="fa-solid fa-code"></i></div>
+          <div class="project-links"><a href="https://github.com/makhzumbinharun" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+        </div>
+        <h3 class="project-title">OOP in C++ – PUNGDOS Presentation</h3>
+        <p class="project-desc">17-slide academic group presentation on OOP in C++ covering inheritance, constructors/destructors, protected members, and the diamond problem. Built for BUBT CSE course, group: PUNGDOS.</p>
+        <div class="project-tags"><span>C++</span><span>OOP</span><span>Academic</span><span>BUBT</span></div>
+      </div>
+      <div class="project-card reveal-up delay-2" data-category="cse">
+        <div class="project-card-top">
+          <div class="project-icon project-icon-cse"><i class="fa-solid fa-chess-knight"></i></div>
+          <div class="project-links"><a href="https://github.com/makhzumbinharun" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+        </div>
+        <h3 class="project-title">Competitive Programming Solutions</h3>
+        <p class="project-desc">Growing repository of C/C++ solutions to problems on Codeforces, BeeCrowd, VJudge, and LeetCode — covering sorting, graph algorithms, dynamic programming, and number theory.</p>
+        <div class="project-tags"><span>C++</span><span>DSA</span><span>Algorithms</span></div>
+      </div>
+      <div class="project-card reveal-up delay-3" data-category="cse">
+        <div class="project-card-top">
+          <div class="project-icon project-icon-cse"><i class="fa-solid fa-globe"></i></div>
+          <div class="project-links">
+            <a href="https://makhzumbinharun.com" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="https://github.com/makhzumbinharun" target="_blank"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Personal Portfolio Website</h3>
+        <p class="project-desc">Fully responsive portfolio built with vanilla HTML, CSS, and JavaScript — no frameworks. Features dark/light mode, typing animation, scroll-reveal, and a full CP section.</p>
+        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+      </div>
+      <div class="project-card reveal-up delay-4" data-category="social">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fa-solid fa-heart"></i></div>
+          <div class="project-links"><a href="https://github.com/makhzumbinharun" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+        </div>
+        <h3 class="project-title">100 Smiles Initiative</h3>
+        <p class="project-desc">Community project under Ashar Alo: distributed Iftar to 100 people, planted 100 saplings, and gifted Eid clothes to 100 needy individuals during Ramadan.</p>
+        <div class="project-tags"><span>Social Impact</span><span>Event Mgmt</span><span>Leadership</span></div>
+      </div>
+      <div class="project-card reveal-up delay-5" data-category="business">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fa-solid fa-store"></i></div>
+          <div class="project-links"><a href="https://github.com/makhzumbinharun" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+        </div>
+        <h3 class="project-title">TechFash Nagar – E-Commerce</h3>
+        <p class="project-desc">Co-founded an online electric products store on Shopify as CTO, managing social media and generating over BDT 42,000 in revenue.</p>
+        <div class="project-tags"><span>Shopify</span><span>Social Media</span><span>E-Commerce</span></div>
+      </div>
+      <div class="project-card project-card-cta reveal-up delay-3" data-category="cse">
+        <div class="project-icon-big"><i class="fa-brands fa-github"></i></div>
+        <p>More on GitHub</p>
+        <a href="https://github.com/makhzumbinharun" target="_blank" class="btn btn-primary">View GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPETITIVE PROGRAMMING -->
+<section id="competitive" class="section cp-section">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <span class="section-label">Algorithmic Problem Solving</span>
+      <h2 class="section-title">Competitive Programming</h2>
+    </div>
+    <p class="cp-intro reveal-up delay-1">Actively solving problems across 7 online judges to sharpen DSA and algorithmic thinking. </p> <!-- Update the <code>✏️</code>-marked stats as you progress. -->
+
+    <!-- Summary stats bar -->
+    <div class="cp-stats-bar reveal-up delay-2">
+      <div class="cp-stat-item"><span class="cp-stat-num">7</span><span class="cp-stat-label">Platforms</span></div>
+      <div class="cp-stat-divider"></div>
+      <!-- ✏️ Update total problems solved -->
+      <div class="cp-stat-item"><span class="cp-stat-num" id="stat-solved">218</span><span class="cp-stat-label">Problems Solved</span></div>
+      <div class="cp-stat-divider"></div>
+      <div class="cp-stat-item"><span class="cp-stat-num">1</span><span class="cp-stat-label">ICPC Registered</span></div>
+      <div class="cp-stat-divider"></div>
+      <!-- ✏️ Update contest count -->
+      <div class="cp-stat-item"><span class="cp-stat-num" id="stat-contests">09</span><span class="cp-stat-label">Contests</span></div>
+    </div>
+
+    <div class="cp-grid">
+
+      <!-- Codeforces -->
+      <a href="https://codeforces.com/profile/makhzumbinharun" target="_blank" class="cp-card reveal-up delay-1">
+        <div class="cp-card-logo">
+          <!-- Official Codeforces colors: bar chart in blue/red/orange -->
+          <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="9" fill="#1a1a2e"/>
+            <rect x="5"  y="19" width="8" height="15" rx="1.5" fill="#3B8BEB"/>
+            <rect x="16" y="11" width="8" height="23" rx="1.5" fill="#E84D4D"/>
+            <rect x="27" y="23" width="8" height="11" rx="1.5" fill="#F5A623"/>
+          </svg>
+        </div>
+        <div class="cp-card-info">
+          <div class="cp-card-top-row">
+            <span class="cp-card-platform">Codeforces</span>
+            <!-- ✏️ Replace badge color class: cp-badge-gray=Newbie, cp-badge-green=Pupil, cp-badge-blue=Specialist etc. -->
+            <span class="cp-badge cp-badge-gray">Unrated</span>
+          </div>
+          <div class="cp-card-handle">@makhzumbinharun</div>
+          <div class="cp-card-stats-row">
+            <!-- ✏️ Replace — with your actual rating -->
+            <span>Rating: <strong class="cp-num" id="cf-rating">—</strong></span>
+            <span>Solved: <strong class="cp-num" id="cf-solved">51</strong></span>
+          </div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square cp-ext"></i>
+      </a>
+
+      <!-- LeetCode -->
+      <a href="https://leetcode.com/u/makhzumbinharun" target="_blank" class="cp-card reveal-up delay-2">
+        <div class="cp-card-logo">
+          <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="9" fill="#1A1A2D"/>
+            <!-- LC stylized path -->
+            <path d="M10 30 L10 11 L15 11 L15 25 L30 25 L30 30 Z" fill="#FFA116"/>
+            <rect x="21" y="15" width="9" height="4" rx="1" fill="#B3B3B3" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="cp-card-info">
+          <div class="cp-card-top-row">
+            <span class="cp-card-platform">LeetCode</span>
+          </div>
+          <div class="cp-card-handle">@makhzumbinharun</div>
+          <div class="cp-card-stats-row">
+            <!-- ✏️ Replace — with your solved count and rating -->
+            <span>Solved: <strong class="cp-num" id="lc-solved">02</strong></span>
+            <span>Rating: <strong class="cp-num" id="lc-rating">—</strong></span>
+          </div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square cp-ext"></i>
+      </a>
+
+      <!-- CodeChef -->
+      <a href="https://www.codechef.com/users/makhzum" target="_blank" class="cp-card reveal-up delay-3">
+        <div class="cp-card-logo">
+          <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="9" fill="#5B4638"/>
+            <!-- Chef hat silhouette -->
+            <ellipse cx="20" cy="16" rx="9" ry="8" fill="#fff"/>
+            <rect x="11" y="21" width="18" height="9" rx="2" fill="#fff"/>
+            <ellipse cx="20" cy="16" rx="5.5" ry="5" fill="#5B4638" opacity="0.2"/>
+          </svg>
+        </div>
+        <div class="cp-card-info">
+          <div class="cp-card-top-row">
+            <span class="cp-card-platform">CodeChef</span>
+            <!-- ✏️ Replace 1★ with your star count -->
+            <span class="cp-badge cp-badge-brown">-</span>
+          </div>
+          <div class="cp-card-handle">@makhzum</div>
+          <div class="cp-card-stats-row">
+            <!-- ✏️ Replace — with your actual rating -->
+            <span>Rating: <strong class="cp-num" id="cc-rating"></strong></span>
+            <span>Solved: <strong class="cp-num" id="cc-solved">87</strong></span>
+          </div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square cp-ext"></i>
+      </a>
+
+      <!-- HackerRank -->
+      <a href="https://www.hackerrank.com/makhzumbinharun" target="_blank" class="cp-card reveal-up delay-4">
+        <div class="cp-card-logo">
+          <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="9" fill="#00EA64"/>
+            <path d="M11 9 L11 31 M29 9 L29 31 M11 20 L29 20" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="cp-card-info">
+          <div class="cp-card-top-row">
+            <span class="cp-card-platform">HackerRank</span>
+          </div>
+          <div class="cp-card-handle">@makhzumbinharun</div>
+          <div class="cp-card-stats-row">
+            <!-- ✏️ Replace — with your domain star ratings e.g. "5★" C-14 CPP-6--> 
+            <span>Problem Solving: <strong class="cp-num">C-3★, CPP-2★</strong></span>
+          </div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square cp-ext"></i>
+      </a>
+
+      <!-- VJudge -->
+      <a href="https://vjudge.net/user/makhzumbinharun" target="_blank" class="cp-card reveal-up delay-1">
+        <div class="cp-card-logo">
+          <!-- VJudge: no official icon; using V-shape representing "Virtual Judge" -->
+          <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="9" fill="#2D3748"/>
+            <path d="M9 10 L20 30 L31 10" stroke="#63B3ED" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="cp-card-info">
+          <div class="cp-card-top-row">
+            <span class="cp-card-platform">VJudge</span>
+          </div>
+          <div class="cp-card-handle">@makhzumbinharun</div>
+          <div class="cp-card-stats-row">
+            <!-- ✏️ Replace — with your VJudge solved count -->
+            <span>Solved: <strong class="cp-num" id="vj-solved">49</strong></span>
+          </div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square cp-ext"></i>
+      </a>
+
+      <!-- BeeCrowd -->
+      <a href="https://judge.beecrowd.com/en/profile/1158254" target="_blank" class="cp-card reveal-up delay-2">
+        <div class="cp-card-logo">
+          <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="9" fill="#F4A623"/>
+            <!-- Bee body -->
+            <ellipse cx="20" cy="21" rx="7" ry="9" fill="#1a1a2e"/>
+            <!-- Wings -->
+            <ellipse cx="12" cy="15" rx="5" ry="3" fill="#fff" opacity="0.85" transform="rotate(-20 12 15)"/>
+            <ellipse cx="28" cy="15" rx="5" ry="3" fill="#fff" opacity="0.85" transform="rotate(20 28 15)"/>
+            <!-- Stripes -->
+            <rect x="14" y="18" width="12" height="2.5" rx="1.2" fill="#F4A623"/>
+            <rect x="14" y="22" width="12" height="2.5" rx="1.2" fill="#F4A623"/>
+            <!-- Antennae -->
+            <line x1="17" y1="12" x2="14" y2="8"  stroke="#1a1a2e" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="23" y1="12" x2="26" y2="8"  stroke="#1a1a2e" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="14" cy="8"  r="1.5" fill="#1a1a2e"/>
+            <circle cx="26" cy="8"  r="1.5" fill="#1a1a2e"/>
+          </svg>
+        </div>
+        <div class="cp-card-info">
+          <div class="cp-card-top-row">
+            <span class="cp-card-platform">BeeCrowd</span>
+          </div>
+          <div class="cp-card-handle">Profile #1158254</div>
+          <div class="cp-card-stats-row">
+            <!-- ✏️ Replace — with your BeeCrowd solved count -->
+            <span>Solved: <strong class="cp-num" id="bc-solved">09</strong></span>
+          </div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square cp-ext"></i>
+      </a>
+
+      <!-- ICPC -->
+      <a href="https://icpc.global/ICPCID/QC0BDC18W1JL" target="_blank" class="cp-card cp-card-icpc reveal-up delay-3">
+        <div class="cp-card-logo">
+          <!-- ICPC Foundation official brand: dark navy bg, red accent, gold star -->
+          <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="9" fill="#002147"/>
+            <!-- Trophy cup shape -->
+            <path d="M14 28 C14 21 17 14 20 14 C23 14 26 21 26 28" stroke="#C41E3A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <rect x="17" y="27" width="6" height="4" rx="1" fill="#C41E3A"/>
+            <rect x="13" y="31" width="14" height="3" rx="1.5" fill="#fff" opacity="0.9"/>
+            <!-- Handles -->
+            <path d="M14 18 C11 18 10 22 14 22" stroke="#C41E3A" stroke-width="1.5" fill="none"/>
+            <path d="M26 18 C29 18 30 22 26 22" stroke="#C41E3A" stroke-width="1.5" fill="none"/>
+            <!-- Star -->
+            <polygon points="20,7 21.5,11.5 26,11.5 22.5,14.5 24,19 20,16.5 16,19 17.5,14.5 14,11.5 18.5,11.5" fill="#FFD700" transform="scale(0.55) translate(16.5,3)"/>
+          </svg>
+        </div>
+        <div class="cp-card-info">
+          <div class="cp-card-top-row">
+            <span class="cp-card-platform">ICPC</span>
+            <span class="cp-badge cp-badge-navy">Registered</span>
+          </div>
+          <div class="cp-card-handle">ID: QC0BDC18W1JL</div>
+          <div class="cp-card-stats-row">
+            <span>Asia Dhaka Region</span>
+            <!-- ✏️ Add regional rank or contest name when available -->
+          </div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square cp-ext"></i>
+      </a>
+
+    </div><!-- /cp-grid -->
+
+    <!-- GitHub Stats -->
+    <div class="github-stats reveal-up delay-4">
+      <h3 class="gh-stats-title"><i class="fa-brands fa-github"></i> GitHub Activity</h3>
+      <div class="gh-stats-cards">
+        <img id="gh-stat-1"
+             src="https://github-readme-stats.vercel.app/api?username=makhzumbinharun&show_icons=true&hide_border=true&bg_color=00000000&title_color=0f4c81&icon_color=0f4c81&text_color=333333"
+             data-light="https://github-readme-stats.vercel.app/api?username=makhzumbinharun&show_icons=true&hide_border=true&bg_color=00000000&title_color=0f4c81&icon_color=0f4c81&text_color=333333"
+             data-dark="https://github-readme-stats.vercel.app/api?username=makhzumbinharun&show_icons=true&hide_border=true&bg_color=00000000&title_color=4a9ede&icon_color=4a9ede&text_color=eeeeee&theme=dark"
+             alt="GitHub Stats" class="gh-stat-img" onerror="this.style.opacity='0.3'"/>
+        <img id="gh-stat-2"
+             src="https://github-readme-streak-stats.herokuapp.com?user=makhzumbinharun&hide_border=true&background=00000000&ring=0f4c81&fire=e85d04&currStreakLabel=0f4c81"
+             data-light="https://github-readme-streak-stats.herokuapp.com?user=makhzumbinharun&hide_border=true&background=00000000&ring=0f4c81&fire=e85d04&currStreakLabel=0f4c81"
+             data-dark="https://github-readme-streak-stats.herokuapp.com?user=makhzumbinharun&hide_border=true&background=00000000&ring=4a9ede&fire=e85d04&currStreakLabel=4a9ede&sideLabels=eeeeee&dates=aaaaaa&currStreakNum=ffffff"
+             alt="GitHub Streak" class="gh-stat-img" onerror="this.style.opacity='0.3'"/>
+      </div>
+      <p class="gh-note"><a href="https://github.com/makhzumbinharun" target="_blank"><i class="fa-brands fa-github"></i> github.com/makhzumbinharun</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section exp-section">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <span class="section-label">My Journey</span>
+      <h2 class="section-title">Experience</h2>
+    </div>
+    <div class="exp-timeline">
+
+      <!-- BASMAH – Social Media & Orphan Care Executive -->
+      <div class="exp-item reveal-left">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <!-- Replace logo: swap src with "logos/basmah.png" when you have it locally -->
+            <div class="exp-logo"><img src="https://basmah.org/wp-content/uploads/2025/10/USA-LOGO-BOLD.png" alt="BASMAH" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><span class="exp-logo-fb" style="display:none">BAS</span></div>
+            <div class="exp-meta">
+              <h4 class="exp-role">Social Media &amp; Orphan Care Executive</h4>
+              <p class="exp-org"><a href="https://basmah.org" target="_blank">BASMAH</a> <span class="exp-type">· Remote · Florida, USA</span></p>
+              <span class="exp-date"><i class="fa-regular fa-calendar"></i> June 2025 – Present</span>
+            </div>
+          </div>
+          <ul class="exp-bullets">
+            <li>Content creation, social media management, audience engagement &amp; analytics reporting</li>
+            <li>Maintains active donor communication for the Orphan Care Program</li>
+            <li>Provides monthly updates, photos, and impact reports for sponsored orphans</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PHYDEMY Project Coordinator -->
+      <div class="exp-item reveal-left delay-1">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <!-- Replace logo: <img src="logos/phydemy.png" alt="PHYDEMY"> <i class="fa-solid fa-diagram-project"></i>-->
+            <div class="exp-logo exp-logo-icon"><img src="https://yt3.googleusercontent.com/bNYyDeMT99vBzw_M4ZuFpTUsPpwE-F9SqtYCuavDBQkniEmFoa3exHpM9qOomOgocMulwCQ39Qg=s160-c-k-c0x00ffffff-no-rj" alt="PHYDEMY"></div>
+            <div class="exp-meta">
+              <h4 class="exp-role">Project Coordinator</h4>
+		<p class="exp-org"><a href="https://www.youtube.com/channel/UCPJLQEfb3SSsInC0xhYXPJQ" target="_blank">PHYDEMY</a> <span class="exp-type">· Remote · Dhaka, Bangladesh</span></p>
+
+              <span class="exp-date"><i class="fa-regular fa-calendar"></i> May 2025 – Present</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHYDEMY Content Typist -->
+      <div class="exp-item reveal-left delay-2">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <!-- Replace logo: <img src="logos/phydemy.png" alt="PHYDEMY"><i class="fa-solid fa-keyboard"></i> -->
+            <div class="exp-logo exp-logo-icon"> <img src="https://yt3.googleusercontent.com/bNYyDeMT99vBzw_M4ZuFpTUsPpwE-F9SqtYCuavDBQkniEmFoa3exHpM9qOomOgocMulwCQ39Qg=s160-c-k-c0x00ffffff-no-rj" alt="PHYDEMY"></div>
+            <div class="exp-meta">
+              <h4 class="exp-role">Content Typist</h4>
+		<p class="exp-org"><a href="https://www.youtube.com/channel/UCPJLQEfb3SSsInC0xhYXPJQ" target="_blank">PHYDEMY</a> <span class="exp-type">· Remote · Dhaka, Bangladesh</span></p>
+              <span class="exp-date"><i class="fa-regular fa-calendar"></i> March 2025 – Present</span>
+            </div>
+          </div>
+          <ul class="exp-bullets">
+            <li>Types and formats high-quality, accurate content meeting strict quality standards</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- BASMAH Social Media Executive (older) -->
+      <div class="exp-item reveal-left delay-3">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <!-- Replace logo: swap src with "logos/basmah.png" when you have it locally -->
+            <div class="exp-logo"><img src="https://basmah.org/wp-content/uploads/2025/10/USA-LOGO-BOLD.png" alt="BASMAH" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><span class="exp-logo-fb" style="display:none">BAS</span></div>
+            <div class="exp-meta">
+              <h4 class="exp-role">Social Media Executive</h4>
+              <p class="exp-org"><a href="https://basmah.org" target="_blank">BASMAH</a> <span class="exp-type">· Remote · Florida, USA</span></p>
+              <span class="exp-date"><i class="fa-regular fa-calendar"></i> January 2025 – May 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TechFash Nagar -->
+      <div class="exp-item reveal-left delay-4">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <!-- Replace logo: <img src="logos/techfash.png" alt="TechFash Nagar"> -->
+            <div class="exp-logo exp-logo-icon"><i class="fa-solid fa-microchip"></i></div>
+            <div class="exp-meta">
+              <h4 class="exp-role">Co-Founder &amp; Chief Technology Officer</h4>
+              <p class="exp-org">TechFash Nagar <span class="exp-type">· Dhaka</span></p>
+              <span class="exp-date"><i class="fa-regular fa-calendar"></i> September 2023 – Present</span>
+            </div>
+          </div>
+          <ul class="exp-bullets">
+            <li>Drives sales of electric products; generated over BDT 42,000 in revenue</li>
+            <li>Manages all social media and creates engaging content</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Fiverr -->
+      <div class="exp-item reveal-left delay-5">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <!-- Replace logo: <img src="logos/fiverr.png" alt="Fiverr"> -->
+           <!-- <div class="exp-logo" style="background:#1dbf73;">
+              <svg width="28" height="18" viewBox="0 0 90 55"><text y="46" font-family="Arial Black,sans-serif" font-size="50" font-weight="900" fill="#fff">fiverr</text></svg>-->
+
+		<div class="exp-logo" ">
+			<svg width="28" height="27" viewBox="0 0 89 27" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="#404145"><path d="m81.6 13.1h-3.1c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-13.4h-2.5c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-18.4h6v2.8c1-2.2 2.3-2.8 4.3-2.8h7.3v2.8c1-2.2 2.3-2.8 4.3-2.8h2zm-25.2 5.6h-12.4c.3 2.1 1.6 3.2 3.7 3.2 1.6 0 2.7-.7 3.1-1.8l5.3 1.5c-1.3 3.2-4.5 5.1-8.4 5.1-6.5 0-9.5-5.1-9.5-9.5 0-4.3 2.6-9.4 9.1-9.4 6.9 0 9.2 5.2 9.2 9.1 0 .9 0 1.4-.1 1.8zm-5.7-3.5c-.1-1.6-1.3-3-3.3-3-1.9 0-3 .8-3.4 3zm-22.9 11.3h5.2l6.6-18.3h-6l-3.2 10.7-3.2-10.8h-6zm-24.4 0h5.9v-13.4h5.7v13.4h5.9v-18.4h-11.6v-1.1c0-1.2.9-2 2.2-2h3.5v-5h-4.4c-4.3 0-7.2 2.7-7.2 6.6v1.5h-3.4v5h3.4z"></path></g><g fill="#1dbf73"><path d="m85.3 27c2 0 3.7-1.7 3.7-3.7s-1.7-3.7-3.7-3.7-3.7 1.7-3.7 3.7 1.7 3.7 3.7 3.7z"></path></g></svg>
+
+            </div>
+            <div class="exp-meta">
+              <h4 class="exp-role">Freelance Copywriter, Translator &amp; Data Entry</h4>
+              <p class="exp-org"><a href="https://www.fiverr.com/sellers/makhzum" target="_blank">Fiverr</a> <span class="exp-type">· Remote</span></p>
+              <span class="exp-date"><i class="fa-regular fa-calendar"></i> November 2023 – Present</span>
+            </div>
+          </div>
+          <ul class="exp-bullets"><li>Document digitization, ghostwriting, and data entry services</li></ul>
+        </div>
+      </div>
+
+      <!-- Rokomari -->
+      <div class="exp-item reveal-left delay-1">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <!-- Replace logo: <img src="logos/rokomari.png" alt="Rokomari"> <i class="fa-solid fa-book"></i>-->
+            <div class="exp-logo exp-logo-icon"><img src="https://www.rokomari.com/static/200/images/rokomari_logo.png" alt="Rokomari"> </div>
+            <div class="exp-meta">
+              <h4 class="exp-role">Affiliate Marketer</h4>
+              <p class="exp-org"><a href="https://rkmri.co/Me3A2eA5lAAA" target="_blank">Rokomari</a> <span class="exp-type">· Dhaka</span></p>
+              <span class="exp-date"><i class="fa-regular fa-calendar"></i> December 2023 – Present</span>
+            </div>
+          </div>
+          <ul class="exp-bullets"><li>Promotes books online; driven over BDT 23,000 in sales to date</li></ul>
+        </div>
+      </div>
+
+      <!-- FM Learning -->
+      <div class="exp-item reveal-left delay-2">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <!-- Replace logo: <img src="logos/fmlearning.png" alt="FM Learning"> -->
+            <div class="exp-logo exp-logo-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+            <div class="exp-meta">
+              <h4 class="exp-role">Group Moderator</h4>
+              <p class="exp-org">FM Learning <span class="exp-type">· Dhaka</span></p>
+              <span class="exp-date"><i class="fa-regular fa-calendar"></i> January 2023 – September 2024</span>
+            </div>
+          </div>
+          <ul class="exp-bullets"><li>Content moderation, member management, events, and group guidelines</li></ul>
+        </div>
+      </div>
+
+      <!-- Ashar Alo -->
+      <div class="exp-item reveal-left delay-3">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <!-- Replace logo: <img src="logos/asharalo.png" alt="Ashar Alo"> -->
+            <div class="exp-logo exp-logo-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+            <div class="exp-meta">
+              <h4 class="exp-role">Head of Social Media</h4>
+              <p class="exp-org">Ashar Alo <span class="exp-type">· Dhaka</span></p>
+              <span class="exp-date"><i class="fa-regular fa-calendar"></i> October 2022 – January 2024</span>
+            </div>
+          </div>
+          <ul class="exp-bullets"><li>Led social media strategy, team management, campaigns, and performance analytics</li></ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <span class="section-label">Get in touch</span>
+      <h2 class="section-title">Contact Me</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+        <p class="contact-text">Open to internships, research collaborations, CP team opportunities, or just a good conversation about algorithms and tech. Feel free to reach out!</p>
+        <div class="contact-links">
+          <a href="mailto:makhzum204@gmail.com" class="contact-link-item">
+            <div class="cl-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div><span class="cl-label">Email</span><span class="cl-val">makhzum204@gmail.com</span></div>
+          </a>
+          <a href="https://www.linkedin.com/in/makhzumbinharun" target="_blank" class="contact-link-item">
+            <div class="cl-icon"><i class="fa-brands fa-linkedin"></i></div>
+            <div><span class="cl-label">LinkedIn</span><span class="cl-val">makhzumbinharun</span></div>
+          </a>
+          <a href="https://github.com/makhzumbinharun" target="_blank" class="contact-link-item">
+            <div class="cl-icon"><i class="fa-brands fa-github"></i></div>
+            <div><span class="cl-label">GitHub</span><span class="cl-val">makhzumbinharun</span></div>
+          </a>
+          <a href="https://codeforces.com/profile/makhzumbinharun" target="_blank" class="contact-link-item">
+            <div class="cl-icon" style="background:rgba(59,139,235,0.12);color:#3B8BEB;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="0" y="9" width="6" height="15" rx="1.5"/><rect x="9" y="3" width="6" height="21" rx="1.5"/><rect x="18" y="13" width="6" height="11" rx="1.5"/></svg></div>
+            <div><span class="cl-label">Codeforces</span><span class="cl-val">makhzumbinharun</span></div>
+          </a>
+        </div>
+      </div>
+      <form class="contact-form reveal-right" id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-group"><label for="cf-name">Name</label><input type="text" id="cf-name" placeholder="Your name" required /></div>
+          <div class="form-group"><label for="cf-email">Email</label><input type="email" id="cf-email" placeholder="your@email.com" required /></div>
+        </div>
+        <div class="form-group"><label for="cf-subject">Subject</label><input type="text" id="cf-subject" placeholder="What's this about?" /></div>
+        <div class="form-group"><label for="cf-msg">Message</label><textarea id="cf-msg" rows="5" placeholder="Write your message here..." required></textarea></div>
+        <button type="submit" class="btn btn-primary btn-full"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+        <p class="form-note" id="form-note"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <svg width="32" height="32" viewBox="0 0 64 64"><rect width="64" height="64" rx="10" fill="var(--accent)"/><text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#fff" letter-spacing="-0.5">MBH</text></svg>
+        <span class="footer-name">Makhzum Bin Harun</span>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/makhzumbinharun" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/makhzumbinharun" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://codeforces.com/profile/makhzumbinharun" target="_blank" aria-label="Codeforces"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="0" y="9" width="6" height="15" rx="1.5"/><rect x="9" y="3" width="6" height="21" rx="1.5"/><rect x="18" y="13" width="6" height="11" rx="1.5"/></svg></a>
+        <a href="https://www.facebook.com/scout.makhzum" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.behance.net/makhzumbinharun" target="_blank" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+        <a href="mailto:makhzum204@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+      <a href="#competitive">CP</a><a href="#experience">Experience</a>
+      <a href="certificates.html" target="_blank">Certificates</a><a href="#contact">Contact</a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Makhzum Bin Harun &nbsp;·&nbsp; CSE @ BUBT &nbsp;·&nbsp; Built with <i class="fa-solid fa-heart" style="color:var(--accent)"></i> in Dhaka, Bangladesh</p>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></button>
+<script src="script.js"></script>
+</body>
+</html>
