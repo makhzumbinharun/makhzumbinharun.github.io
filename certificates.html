@@ -104,8 +104,8 @@
     <button class="cert-filter-btn active" data-filter="all">All</button>
     <button class="cert-filter-btn" data-filter="programming">Programming</button>
     <button class="cert-filter-btn" data-filter="ecommerce">E-Commerce</button>
-    <button class="cert-filter-btn" data-filter="social">Social / Media</button>
-    <button class="cert-filter-btn" data-filter="leadership">Leadership</button>
+    <button class="cert-filter-btn" data-filter="technical">Technical</button>
+    <button class="cert-filter-btn" data-filter="eca">ECA</button>
     <button class="cert-filter-btn" data-filter="other">Other</button>
   </div>
 
@@ -116,7 +116,7 @@
          HOW TO ADD A CERTIFICATE:
          1. Copy one <div class="cert-card"> block below
          2. Fill in: cert-title, cert-issuer, cert-date
-         3. Set data-category (programming/ecommerce/social/leadership/other)
+         3. Set data-category (programming/ecommerce/technical/eca/other)
          4. For image: replace cert-preview-placeholder with:
               <img src="certs/your-cert.jpg" alt="Certificate title">
          5. Set data-img-src on .cert-preview to the image URL
@@ -154,10 +154,11 @@
     </div>
 
     <!-- Extracurricular placeholder 1 -->
-    <div class="cert-card" data-category="other">
+    <div class="cert-card" data-category="technical">
       <div class="cert-preview" data-img-src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~X2PQH8RTDU8X/CERTIFICATE_LANDING_PAGE~X2PQH8RTDU8X.jpeg" data-title="Wordpress Certificate">
         <div class="cert-preview-placeholder">
-          <i class="fa-solid fa-award" style="color:var(--accent);"></i>
+          <i class="fa-brands fa-wordpress" style="color:#0073aa;"></i>
+        <!--  <i class="fa-solid fa-award" style="color:var(--accent);"></i>-->
           <span>Click to preview</span>
         </div>
         <div class="cert-preview-overlay">
@@ -165,7 +166,7 @@
         </div>
       </div>
       <div class="cert-body">
-        <span class="cert-category-tag">Leadership</span>
+        <span class="cert-category-tag">Technical</span>
         <!-- ✏️ Replace with your actual certificate details -->
         <h3 class="cert-title">Build a free website with WordPress</h3>
         <p class="cert-issuer"><i class="fa-solid fa-building"></i> Coursera</p>
@@ -178,7 +179,7 @@
     </div>
 
     <!-- Placeholder 2 -->
-    <div class="cert-card" data-category="other">
+    <div class="cert-card" data-category="eca">
       <div class="cert-preview" data-img-src="https://media.licdn.com/dms/image/v2/D562DAQEyQtk0S_VkLw/profile-treasury-image-shrink_800_800/B56Zo6FGphJwAk-/0/1761911015298?e=1776985200&v=beta&t=O6JzP_AHWbgbv-8LKLPVSf7kzD39vIqW-ImJrwxBD1M" data-title="Certificate">
         <div class="cert-preview-placeholder">
           <i class="fa-solid fa-certificate" style="color:var(--accent);"></i>
@@ -189,7 +190,7 @@
         </div>
       </div>
       <div class="cert-body">
-        <span class="cert-category-tag">Other</span>
+        <span class="cert-category-tag">ECA</span>
         <!-- ✏️ Replace with your actual certificate details -->
         <h3 class="cert-title">5th in the Quiz Competition in the Engineering Olympiad 2025</h3>
         <p class="cert-issuer"><i class="fa-solid fa-building"></i> BUBT Civil Club</p>
